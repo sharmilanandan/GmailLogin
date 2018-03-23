@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class GmailPage {
 	//implementing page object model concept
 	//Encapsulating the webelements 1.declaring webelements
+	  //@FindBy(id="identifierId")
 		@FindBy(xpath="//input[@type='email']")
 		private WebElement emailTXFD;
 		
