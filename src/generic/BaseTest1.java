@@ -16,6 +16,7 @@ public static WebDriver driver;
 	//setting system properties 
 	 @BeforeSuite(alwaysRun=true)
 	 public static void setProperty(){
+		// Excel.writeDataToExcel(EXCEL_PATH,"Sheet1");
 		 System.setProperty(CHROME_KEY, CHROME_VALUE);
 		 System.setProperty(GECKO_KEY, GECKO_VALUE);
 	 }

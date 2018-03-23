@@ -12,7 +12,7 @@ public class Test1 extends BaseTest1 {
 	public void openApp(){
 		String s=driver.getCurrentUrl();
 		Reporter.log(s,true);
-		//Excel.writeDataToExcel("./data/input.xlsx", "Sheet1");
+		Excel.writeDataToExcel("./data/input.xlsx", "Sheet1");
 	}
 	
 
