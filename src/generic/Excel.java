@@ -14,22 +14,7 @@ import org.testng.Reporter;
 public class Excel {
 
 	//writing data into Excel sheet
-	public static void writeDataToExcel(String exlpath,String sheet){
-		Scanner sc=new Scanner(System.in);
-		Reporter.log("Enter your username or mobile no",true);
-	   String userEmail=sc.next();
-	   Reporter.log("Enter your password ",true);
-	    String pwd=sc.next(); 
-		try {
-			Workbook wb=WorkbookFactory.create(new FileInputStream(exlpath));
-			wb.getSheet(sheet).createRow(0).createCell(0).setCellValue(userEmail);
-			wb.getSheet(sheet).getRow(0).createCell(1).setCellValue(pwd);
-			wb.write(new FileOutputStream(exlpath));
-		} catch (EncryptedDocumentException | InvalidFormatException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	
 	
 	public static String getcellValue(String excelpath,String sheet,int r,int c)
 	{

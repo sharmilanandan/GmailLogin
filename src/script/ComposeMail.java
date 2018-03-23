@@ -1,7 +1,7 @@
 package script;
 
 import generic.AUL;
-import generic.BaseTest;
+import generic.BaseTest1;
 import generic.Excel;
 
 import java.util.Scanner;
@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import page.GmailPage;
 import page.InboxPage;
 
-public class ComposeMail extends BaseTest {
+public class ComposeMail extends BaseTest1 {
 	
 @Test(priority=1)
 public void testcomposeMail(){
