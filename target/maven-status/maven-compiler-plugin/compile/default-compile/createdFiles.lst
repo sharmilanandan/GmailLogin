@@ -1,4 +1,3 @@
-generic\BaseTest.class
 page\GmailPage.class
 delete\PropertyDemo.class
 delete\ExcelDemo.class
@@ -6,5 +5,6 @@ script\ComposeMail.class
 generic\Excel.class
 page\InboxPage.class
 generic\AUL.class
+generic\BaseTest1.class
 delete\Test1.class
 generic\IAutoConst.class
