@@ -1,0 +1,37 @@
+# Created on 2018-03-09T14:22:47.564
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created on 2018-03-09T14:22:47.564
+Unexpected IOException with stream: Enter your password 
+
+
+# Created on 2018-03-09T14:22:47.580
+Unexpected IOException: 8,1,script.ComposeMail,setProperty(script.ComposeMail),null,null,null,null,ComposeMail>BaseTest.setProperty:20 \00BB NoSuchElement,java.util.NoSuchElementException\000A
+
+
+# Created on 2018-03-09T14:22:47.627
+Unexpected IOException: 8,1,script.ComposeMail,openApplication(script.ComposeMail),null,The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information\002C see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html,null,The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information\002C see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html,ComposeMail>BaseTest.openApplication:29 \00BB IllegalState The path to the driver ...,java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information\002C see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html\000A
+
+
+# Created on 2018-03-09T14:22:47.627
+Unexpected IOException: 9,1,script.ComposeMail,testcomposeMail(script.ComposeMail),null,The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information\002C see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html,null
+
+
+# Created on 2018-03-09T14:22:47.642
+Unexpected IOException with stream: close test  :testcomposeMail  status  :3
+
+
+# Created on 2018-03-09T14:22:47.642
+Unexpected IOException: 8,1,script.ComposeMail,closeAppication(script.ComposeMail),null,null,null,null,ComposeMail>BaseTest.closeAppication:46 \00BB NullPointer,java.lang.NullPointerException\000A
+
+
+# Created on 2018-03-09T14:22:47.720
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGXmlTestSuite,TestSuite,null,null,null
+
+

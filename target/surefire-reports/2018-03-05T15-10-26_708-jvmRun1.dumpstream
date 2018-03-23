@@ -1,0 +1,36 @@
+# Created on 2018-03-05T15:10:47.203
+[SUREFIRE] std/in stream corrupted
+java.io.IOException: Command NOOP unexpectedly read Void data with length 4.
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:130)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created on 2018-03-05T18:22:44.306
+Unexpected IOException with stream: Enter your password 
+
+
+# Created on 2018-03-05T18:22:44.339
+Unexpected IOException: 8,1,script.ComposeMail,setProperty(script.ComposeMail),null,No line found,null,No line found,ComposeMail>BaseTest.setProperty:20 \00BB NoSuchElement No line found,java.util.NoSuchElementException: No line found\000A
+
+
+# Created on 2018-03-05T18:22:44.385
+Unexpected IOException: 8,1,script.ComposeMail,openApplication(script.ComposeMail),null,The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information\002C see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html,null,The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information\002C see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html,ComposeMail>BaseTest.openApplication:28 \00BB IllegalState The path to the driver ...,java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information\002C see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html\000A
+
+
+# Created on 2018-03-05T18:22:44.385
+Unexpected IOException: 9,1,script.ComposeMail,testcomposeMail(script.ComposeMail),null,The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information\002C see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html,null
+
+
+# Created on 2018-03-05T18:22:44.385
+Unexpected IOException with stream: close test  :testcomposeMail  status  :3
+
+
+# Created on 2018-03-05T18:22:44.385
+Unexpected IOException: 8,1,script.ComposeMail,closeAppication(script.ComposeMail),null,null,null,null,ComposeMail>BaseTest.closeAppication:45 \00BB NullPointer,java.lang.NullPointerException\000A
+
+
+# Created on 2018-03-05T18:22:44.479
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGXmlTestSuite,TestSuite,null,null,null
+
+

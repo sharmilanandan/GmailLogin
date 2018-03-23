@@ -1,0 +1,11 @@
+# Created on 2018-03-06T14:06:59.108
+[SUREFIRE] std/in stream corrupted: first sequence not recognized
+
+# Created on 2018-03-06T17:57:38.673
+Unexpected IOException with stream: Enter your password 
+
+
+# Created on 2018-03-06T17:57:38.962
+Unexpected IOException: 8,1,script.ComposeMail,setProperty(script.ComposeMail),null,No line found,null,No line found,ComposeMail>BaseTest.setProperty:20 \00BB NoSuchElement No line found,java.util.NoSuchElementException: No line found\000A
+
+
