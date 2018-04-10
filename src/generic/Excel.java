@@ -17,9 +17,9 @@ public class Excel {
 	public static void writeDataToExcel(String exlpath,String sheet){
 		Scanner sc=new Scanner(System.in);
 		Reporter.log("Enter your username or mobile no",true);
-	   String userEmail=sc.next();
+	   String userEmail=sc.nextLine();
 	   Reporter.log("Enter your password ",true);
-	    String pwd=sc.next(); 
+	    String pwd=sc.nextLine(); 
 		try {
 			Workbook wb=WorkbookFactory.create(new FileInputStream(exlpath));
 			wb.getSheet(sheet).createRow(0).createCell(0).setCellValue(userEmail);

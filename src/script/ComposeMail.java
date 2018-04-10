@@ -1,7 +1,7 @@
 package script;
 
 import generic.AUL;
-import generic.BaseTest1;
+import generic.BaseTest;
 import generic.Excel;
 
 import java.util.Scanner;
@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import page.GmailPage;
 import page.InboxPage;
 
-public class ComposeMail extends BaseTest1 {
+public class ComposeMail extends BaseTest{
 	
 @Test(priority=1)
 public void testcomposeMail(){
@@ -30,15 +30,18 @@ public void testcomposeMail(){
 	//click next btn
 	gp.clickNextBtn();
 	//enter password
+	//AUL.sleep(3);
 	gp.enterpwd(userPWd);
 	//click next
-	AUL.sleep(2);
+	//AUL.sleep(2);
 	gp.clickNextBtn();
 	
 	}
 	//if username wrong verify error msg
 	catch(Exception e){
-		Reporter.log("Enter valid username/pwd");
+		e.printStackTrace();
+		throw e;
+		//Reporter.log("Enter valid username/pwd",true);
 	}
 	
 	InboxPage ip=new InboxPage(driver);

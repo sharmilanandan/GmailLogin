@@ -6,9 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 public class InboxPage {
+	WebDriver driver;
+	WebDriverWait wait;
 	@FindBy(xpath="//a[@aria-label='Google apps']")
 	private WebElement hamBurgerMenu;
 	 
@@ -42,29 +46,35 @@ public class InboxPage {
 	@FindBy(xpath="//img[@data-tooltip='Show details']")
 	private WebElement clickSentMailDetails;
 	
-	@FindBy(xpath="//span[@class='gb_ab gbii']")
+	@FindBy(xpath="//div/a[contains(@title,'Google Account')]/span")
 	private WebElement clikcSignoutProfile;
 	
 	@FindBy(xpath="//a[text()='Sign out']")
 	private WebElement signOutBTN;
 	
 	public InboxPage(WebDriver driver){
+		this.driver=driver;
+		wait=new WebDriverWait(driver,10);
 		PageFactory.initElements(driver,this);
 	}
 	
 	public void clickHamburgerMenu(){
+		wait.until(ExpectedConditions.elementToBeClickable(hamBurgerMenu));
 		hamBurgerMenu.click();
 	}
 	
 	public void clickongmailLink(){
+		wait.until(ExpectedConditions.elementToBeClickable(gmailLink));
 		gmailLink.click();
 	}
 	
 	public void clickOnCompose(){
+		wait.until(ExpectedConditions.elementToBeClickable(composeClick));
 		composeClick.click();
 	}
 	
 	public void clickonToAddress(String str){
+		wait.until(ExpectedConditions.elementToBeClickable(clickToAddres));
 		clickToAddres.sendKeys(str);
 	}
 	public void clickonCcAddress(){
