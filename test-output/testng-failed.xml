@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+  <test name="TestCHROME(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="script.ComposeMail">
@@ -13,5 +13,5 @@
         </methods>
       </class> <!-- script.ComposeMail -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- TestCHROME(failed) -->
 </suite> <!-- Failed suite [Suite] -->

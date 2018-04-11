@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.opera.OperaDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -22,24 +23,27 @@ public class BaseTest implements IAutoConst {
 		 //Excel.writeDataToExcel(EXCEL_PATH,"Sheet1");
 		 System.setProperty(CHROME_KEY, CHROME_VALUE);
 		 System.setProperty(GECKO_KEY, GECKO_VALUE);
+		 System.setProperty(OPERA_KEY, OPERA_VALUE);
 	 }
 	
 	 //code for opening browser
-	 @Parameters({"browser"})
+	// @Parameters({"browser"})
 	  @BeforeMethod(alwaysRun=true)
-	 public void openApplication(String browser){
+	 public void openApplication(){
 		 //getting browser value from testng.xml file
-	      if(browser.equalsIgnoreCase("chrome"))
-     		 driver=new ChromeDriver();
-		 else
-			 driver=new FirefoxDriver();
-		 //getting browser value from property file
-//		 String browser=AUL.getProperty(PROPERTY_PATH,"BROWSER");
-//		 Reporter.log(browser,true);
-//		 if(browser.equalsIgnoreCase("Firefox")){
-//				 driver=new FirefoxDriver();}
+//	      if(browser.equalsIgnoreCase("chrome"))
+//     		 driver=new ChromeDriver();
+//		 else if(browser.equalsIgnoreCase("firefox"))
+//			 driver=new FirefoxDriver();
 //		 else
-//			 driver=new ChromeDriver(); 
+//			 driver=new OperaDriver();
+		 //getting browser value from property file
+		 String browser=AUL.getProperty(PROPERTY_PATH,"BROWSER");
+		 Reporter.log(browser,true);
+		 if(browser.equalsIgnoreCase("Firefox")){
+				 driver=new FirefoxDriver();}
+		 else
+			 driver=new ChromeDriver(); 
 		 long ITO=Long.parseLong(AUL.getProperty(PROPERTY_PATH, "ITO"));
 		 driver.manage().timeouts().implicitlyWait(ITO,TimeUnit.SECONDS);
 		 String URL=AUL.getProperty(PROPERTY_PATH, "URL");
