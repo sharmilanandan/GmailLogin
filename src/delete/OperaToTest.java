@@ -10,9 +10,9 @@ static{
 	System.setProperty("webdriver.ie.driver","./driver/IEDriverServer.exe");
 }
 public static void main(String[] args) {
-	//WebDriver driver=new OperaDriver();
-	WebDriver driver=new InternetExplorerDriver();
-	driver.get("https://www.youtube.com/");
+	WebDriver driver=new OperaDriver();
+	//WebDriver driver=new InternetExplorerDriver();
+	driver.get("https://www.google.com");
 	
 }
 }
