@@ -13,8 +13,9 @@ import org.testng.annotations.Test;
 
 import page.GmailPage;
 import page.InboxPage;
+import page.SentMailSubPage;
 
-public class ComposeMail extends BaseTest {
+public class ComposeMailAndDelete extends BaseTest {
 
 	@Test(priority = 1)
 	public void testcomposeMail() {
@@ -55,28 +56,35 @@ public class ComposeMail extends BaseTest {
 		ip.clickOnCompose();
 
 		// click to address
-		String str = Excel.getcellValue(EXCEL_PATH, "Sheet2", 0, 0);
+		String str = Excel.getcellValue(EXCEL_PATH, "Sheet2", 1, 0);
 		ip.clickonToAddress(str);
 
 		// click on cc
-		String ccmailid = Excel.getcellValue(EXCEL_PATH, "Sheet2", 0, 1);
+		String ccmailid = Excel.getcellValue(EXCEL_PATH, "Sheet2", 1, 1);
 		ip.clickonCcAddress();
 		ip.enterCcAddress(ccmailid, driver);
 		driver.findElement(By.xpath("//span[text()='Cc' and @aria-label='Cc - Select Contacts']")).sendKeys(ccmailid);
 
 		// enter subject
-		String subj = Excel.getcellValue(EXCEL_PATH, "Sheet2", 0, 2);
+		String subj = Excel.getcellValue(EXCEL_PATH, "Sheet2", 1, 2);
 		ip.enterSubject(subj);
 
 		// enter text into mailbody
-		String msg = Excel.getcellValue(EXCEL_PATH, "Sheet2", 0, 3);
+		String msg = Excel.getcellValue(EXCEL_PATH, "Sheet2", 1, 3);
 		ip.entertextintoMsgBody(msg);
+
+		// attach any document (unable to attach file)
+		ip.clickattachFile();
 
 		// click send
 		ip.clickSendBTN();
 
-		// clicking on sent msg view
+		// verify message
 		ip.verifysentMsg();
+
+		// click on delete button(not working)
+		SentMailSubPage sp = new SentMailSubPage(driver);
+		sp.clickDeleteBTN();
 
 		// click signout
 		ip.clickSignOutProfile();

@@ -3,14 +3,14 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="script.ComposeMail">
+      <class name="script.ComposeMailAndDelete">
         <methods>
-          <include name="testcomposeMail"/>
           <include name="setProperty"/>
           <include name="closeAppication"/>
+          <include name="testcomposeMail"/>
           <include name="openApplication"/>
         </methods>
-      </class> <!-- script.ComposeMail -->
+      </class> <!-- script.ComposeMailAndDelete -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

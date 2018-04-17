@@ -8,19 +8,19 @@ import generic.AUL;
 
 public class PropertyDemo {
 	public static WebDriver driver;
-	static{
-		System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
-		System.setProperty("webdriver.gecko.driver","./driver/geckodriver.exe");
+	static {
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		System.setProperty("webdriver.gecko.driver", "./driver/geckodriver.exe");
 	}
+
 	public static void main(String[] args) {
-		String s=AUL.getProperty("./settings.properties","URL");
+		String s = AUL.getProperty("./settings.properties", "URL");
 		System.out.println(s);
-		driver=new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.get(s);
-		driver=new FirefoxDriver();
+		driver = new FirefoxDriver();
 		driver.get(s);
 		AUL.getPhoto(driver, "test", "./photo");
 	}
-	
 
 }
